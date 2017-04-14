@@ -1,0 +1,64 @@
+{
+ "swagger": "2.0",
+ "info": {
+  "version": "1.0.0",
+  "title": "echo-api.endpoints.healthcare-12.cloud.goog"
+ },
+ "host": "echo-api.endpoints.healthcare-12.cloud.goog",
+ "basePath": "/_ah/api",
+ "schemes": [
+  "https"
+ ],
+ "consumes": [
+  "application/json"
+ ],
+ "produces": [
+  "application/json"
+ ],
+ "paths": {
+  "/helloworldendpoints/v1/sayHello": {
+   "get": {
+    "operationId": "HelloworldendpointsSayHello",
+    "parameters": [ ],
+    "responses": {
+     "200": {
+      "description": "A successful response",
+      "schema": {
+       "$ref": "#/definitions/HelloClass"
+      }
+     }
+    }
+   }
+  },
+  "/helloworldendpoints/v1/sayHelloByName": {
+   "get": {
+    "operationId": "HelloworldendpointsSayHelloByName",
+    "parameters": [
+     {
+      "name": "name",
+      "in": "query",
+      "required": true,
+      "type": "string"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "A successful response",
+      "schema": {
+       "$ref": "#/definitions/HelloClass"
+      }
+     }
+    }
+   }
+  }
+ },
+ "definitions": {
+  "HelloClass": {
+   "properties": {
+    "message": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}
